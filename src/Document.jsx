@@ -288,6 +288,8 @@ export default class Document extends PureComponent {
   }
 
   unregisterPage = (pageIndex) => {
+    const page = this.pages[pageIndex];
+    page.destroy();
     delete this.pages[pageIndex];
   }
 
